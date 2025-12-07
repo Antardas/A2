@@ -17,7 +17,7 @@ POST http://localhost:5000/api/v1/auth/signin
 Content-Type: application/json
 
 {
-  "email": "admin@example.com",
+  "email": "john.updated@example.com",
   "password": "Password@123"
 }
 
@@ -30,7 +30,7 @@ Content-Type: application/json
   "password": "adminPassword123"
 }
 
-@auth_token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+@auth_token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4udXBkYXRlZEBleGFtcGxlLmNvbSIsInJvbGUiOiJjdXN0b21lciIsInVzZXJJZCI6MSwiaWF0IjoxNzY1MTI3MDI0fQ.sX7FeF9Tj1sz29Rwf2CV0J1s6x_G4FX-ZbpR3RMg-7I
 @admin_token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwicm9sZSI6ImFkbWluIiwidXNlcklkIjoyLCJpYXQiOjE3NjUxMDg5MjF9.J0-fYRwvYHeySWhlmc8JKaY7DO_Rkl7CJNYzLZQJ_Xs
 
 ### 4. Create Vehicle (Admin only)
@@ -41,7 +41,7 @@ Content-Type: application/json
 {
   "vehicle_name": "Toyota Camry 2024",
   "type": "car",
-  "registration_number": "ABC-1234",
+  "registration_number": "ABC-1237",
   "daily_rent_price": 50,
   "availability_status": "available"
 }
@@ -88,7 +88,7 @@ Authorization: Bearer {{auth_token}}
 Content-Type: application/json
 
 {
-  "name": "John Doe Updated",
+  "name": "John Doe Mine",
   "email": "john.updated@example.com",
   "phone": "+1234567899",
   "role": "customer"
@@ -101,7 +101,7 @@ Content-Type: application/json
 
 {
   "customer_id": 1,
-  "vehicle_id": 2,
+  "vehicle_id": 3,
   "rent_start_date": "2024-01-15",
   "rent_end_date": "2024-01-20"
 }
@@ -133,7 +133,7 @@ Content-Type: application/json
 }
 
 ### 16. Delete Vehicle (Admin only)
-DELETE http://localhost:5000/api/v1/vehicles/1
+DELETE http://localhost:5000/api/v1/vehicles/10
 Authorization: Bearer {{admin_token}}
 
 ### 17. Delete User (Admin only)

@@ -3,20 +3,8 @@ import jwt from 'jsonwebtoken';
 import config from '../config';
 import AppError from '../utils/AppError';
 import { Role } from '../types';
+import { JwtPayload } from '../types/express';
 
-interface JwtPayload {
-    email: string;
-    role: Role;
-    userId: number;
-}
-
-declare global {
-    namespace Express {
-        interface Request {
-            user?: JwtPayload;
-        }
-    }
-}
 
 export const authenticate = (req: Request, res: Response, next: NextFunction) => {
     try {
