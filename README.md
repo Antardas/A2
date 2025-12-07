@@ -1,6 +1,6 @@
 # Vehicle Rental System API
 
-Live URL: `http://localhost:5000`
+Live URL: `https://a2-ochre-five.vercel.app`
 
 ## Overview
 
