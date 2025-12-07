@@ -99,4 +99,4 @@ Authorization: Bearer <token>
 - **Users** – `/api/v1/users`
 - **Bookings** – `/api/v1/bookings`
 
-Detailed request/response formats are in `API_REFERENCE.md` and `api.http` examples in the project root.
+Detailed request/response formats are in `api.http` examples in the project root.
